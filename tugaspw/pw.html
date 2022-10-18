@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembelian</title>
+</head>
+<body>
+    <form action="formpembelian.html">
+    <fieldset style="background-color: gainsboro;">
+    <fieldset style="background-color: white;">
+        <table>
+            <tr>
+                <td style="width: 240px ;"><a href="">Home  |</a></td>
+                <td style="width: 240px;"><a href="">Generate Link  |</a></td>
+                <td style="width: 240px;"><a href="">Transaction History    |</a></td>
+                <td style="width: 240px;"><a href="">Policy |</a></td>
+                <td style="width: 240px;"><a href="">Logout</a></td>
+            </tr>
+        </table>
+    </fieldset>
+    <br>
+    <img style="width: 200px;" src="sepatu futsal.jpg" alt="">
+        <table>
+            <tr>
+                <td>
+                    <label for="titlehere">Title Here</label>
+                </td>
+                <td>:</td>
+                <td>
+                <input type="text" name="titlehere" id="titlehere">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="description">Description</label>
+                </td>
+                <td>:</td>
+                <td>
+                    <textarea name="description" id="description" cols="17" rows="5" maxlength="400"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="account">Account Number</label>
+                </td>
+                <td>:</td>
+                <td>
+                <input type="number" name="account" id="account">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="bank">Bank</label>
+                    <td>:</td>
+                    <td>
+                    <select name="bank" id="bank">
+                        <option value="bni">BNI</option>
+                        <option value="bca">BCA</option>
+                        <option value="visa">VISA</option>
+                        <option value="bri">BRI</option>
+                    </select>
+                    </td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="account">Account Holder</label>
+                </td>
+                <td>:</td>
+                <td>
+                <input type="account" name="account" id="account">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="transaction">Transaction</label>
+                    <td>:</td>
+                    <td>
+                    <select name="transaction" id="number">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <small style="color: green;">
+                       <br>the transaction is for 3 person, choose 3 from the drop-down list
+                    
+                       <br><input type="checkbox" name="transaction[]" value="phone" id="phone">
+                       <label for="phone">Send to Mobile Phone</label>
+                       <br><input type="checkbox" name="transaction[]" value="email" id="email">
+                       <label for="email">Send to Email</label>
+                    </small>
+                </td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">Send to Mobile Phone</label>
+                </td>
+                <td>:</td>
+                <td>
+                <input type="number" name="phone" id="phone">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Send to Email</label>
+                </td>
+                <td>:</td>
+                <td>
+                <input type="text" name="email" id="email">
+                </td>
+            </tr>
+        </table>
+    <br>
+    <input style="background-color: green;" type="submit" value="Generate Nabr Link">
+    </fieldset>
+</form>
+</body>
+</html>
