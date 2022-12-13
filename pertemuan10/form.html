@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Selamat Datang</h1>
+    <form onsubmit="return false">
+        <label for="name">Nama Pelangan: </label>
+        <span id="salahNama"></span>
+        <br>
+        <input type="text" id="name" maxlength="30">
+        <br>
+        <label for="email">Email: </label>
+        <span id="salahEmail"></span>
+        <br>
+        <input type="text" id="email">
+        <br>
+        <label for="berangkat">Jam Keberangkatan: </label>
+        <span id="salahJam"></span>
+        <br>
+        <input type="time" id="berangkat">
+        <br>
+        <label for="tujuan">Tujuan Keberangkatan: </label>
+        <span id="salahTujuan"></span>
+        <br>
+        <input type="text" id="tujuan">
+        <br>
+        <label for="tiket">Jumlah Tiket: </label>
+        <span id="salahTiket"></span>
+        <br>
+        <select id="tiket">
+            <option value="">tiket</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <button onclick="validasi()">Validasi</button>
+        <button onclick="window.location.reload()">Reset</button>
+    </form>
+
+    <h1 id="valid"></h1>
+    <p id="namaBenar"></p>
+    <p id="emailBenar"></p>
+    <p id="jamBenar"></p>
+    <p id="tujuanBenar"></p>
+    <p id="tiketBenar"></p>
+
+    <script>
+        function validasi() {
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let berangkat = document.getElementById('berangkat').value;
+            let tujuan = document.getElementById('tujuan').value;
+            let tiket = document.getElementById('tiket').value;
+
+            if (name == ''){
+                document.getElementById('salahNama').innerHTML = 'Nama Tidak Valid'
+                document.getElementById('salahNama').style = 'color:red'
+            }
+            if (email == ''){
+                document.getElementById('salahEmail').innerHTML = 'Email Tidak Valid'
+                document.getElementById('salahEmail').style = 'color:red'
+            }
+            if (berangkat == ''){
+                document.getElementById('salahJam').innerHTML = 'Jam Tidak Valid'   
+                document.getElementById('salahJam').style = 'color:red'   
+            }
+            if (tujuan == ''){
+                document.getElementById('salahTujuan').innerHTML = 'Tujuan Tidak Valid'
+                document.getElementById('salahTujuan').style = 'color:red'
+            }
+            if (tiket == ''){
+                document.getElementById('salahTiket').innerHTML = 'Tiket Tidak Valid'
+                document.getElementById('salahTiket').style = 'color:red'
+            }
+            else {
+                document.getElementById('valid').innerHTML = 'Selamat Validasi Sukses'
+                document.getElementById('namaBenar').innerHTML = 'Nama : ' + name;
+                document.getElementById('emailBenar').innerHTML = 'Email : ' + email
+                document.getElementById('jamBenar').innerHTML = 'Jam Keberangkatan : ' + berangkat
+                document.getElementById('tujuanBenar').innerHTML = 'Tujuan : ' + tujuan
+                document.getElementById('tiketBenar').innerHTML = 'Jumlah Tiket : ' + tiket
+            } 
+        }
+    </script>
+</body>
+</html>
