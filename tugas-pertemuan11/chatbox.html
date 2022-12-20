@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox</title>
+</head>
+<body>
+    <fieldset style=" height: 90vh;">
+        <legend>Chatbox</legend>
+        <div id="chat">
+        <p>ChatBox send</p>
+        <hr>
+        </div>
+        </fieldset>
+        <div>
+            <input id="input" type="text">
+            <button onclick="send()">Kirim</button>
+        </div>
+
+
+    <script>
+        function send(){
+            let text = document.getElementById('input').value;
+            let paragraph = document.createElement('p');
+
+            paragraph.innerHTML = String(text);
+            document.getElementById('chat').appendChild(paragraph)
+        }
+    </script>
+</body>
+</html>
